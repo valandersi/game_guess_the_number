@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	</style>
+</head>
+<body>
+<h1>Угадай число!!</h1>
+<p>Введите число:</p>
+<input type="number"><br>
+<span></span>
+<script>
+"use strict"
+var inp = document.querySelector("input");
+var result = document.querySelector("span");
+inp.addEventListener("keyup",predictNum);
+var random;
+inp.focus();
+startRandom();
+
+function startRandom(){
+random = Math.floor(Math.random()*100 + 1);
+}
+
+function predictNum() {
+			
+	if(inp.value == ""){
+	result.textContent = "";
+	inp.value = "";
+	}  
+		
+	else if (inp.value > 100){
+	alert("Число не может быть больше 100");
+	inp.value = "";
+	}  
+		
+	else if (inp.value < 1){
+	alert("Загаданное число от 1 до 100");
+	inp.value = "";
+	}  
+		
+		else{
+			if(inp.value < random){
+			result.textContent = "Загаданное число больше " + inp.value;
+			}  
+			else if(inp.value > random){
+			result.textContent = "Загаданное число меньше "  + inp.value;
+			} 
+			else if(inp.value == random){
+			result.textContent = "";
+			alert("Вы выиграли. Это число " + inp.value + ". Давай ещё?");		
+			inp.value = "";
+			startRandom();
+			}
+		}
+	
+	}
+
+
+
+//	 Реализуйте игру 'угадай число'. Суть: компьютер загадывает число от 1 до 100. 
+//	 В инпут на экране игрок вводит число от 1 до 100, пытаясь угадать, что же загадал компьютер. 
+//	 Если игрок ввел число, меньше загаданного, компьютер должен написать 'введите число побольше', а если введено больше загаданного, 
+//	 то, соответственно, компьютер должен написать 'введите число поменьше'. Если же игрок угадал число, игра начинается сначала.
+
+</script>
+</body>
+</html>
+
+

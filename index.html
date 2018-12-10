@@ -6,7 +6,7 @@
 	<style>
 	#inp{border: 2px dotted blue;}
 	body {background-color: #d57785;color:white;}
-	span {font-size:24px;font-weigth:bold;}
+	span {font-size:20px;font-weigth:bold;}
 
 
 	</style>
@@ -55,10 +55,10 @@ function predictNum() {
 		
 		else{
 			if(inp.value < random){
-			result.textContent = "Загаданное число больше " + inp.value;
+			result.textContent = "Больше загаданного числа " + inp.value;
 			}  
 			else if(inp.value > random){
-			result.textContent = "Загаданное число меньше "  + inp.value;
+			result.textContent = "Меньше загаданного числа "  + inp.value;
 			} 
 			else if(inp.value == random){
 			result.textContent = "";

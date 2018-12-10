@@ -5,8 +5,9 @@
 	<title>Угадай число!!</title>
 	<style>
 	#inp{border: 2px dotted blue;}
-	body {background-color: #d57785;color:white;}
-	span {font-size:20px;font-weigth:bold;}
+	body {background-color: #d57785;color:white;text-align:center;}
+	span {font-size:20px;font-weigth:bold;color:black;}
+	input{padding:10px;}
 
 
 	</style>
@@ -15,7 +16,7 @@
 <body>
 <h1>Игра: Угадай число!!</h1>
 <p>Угадай число - это логическая игра. Сють игры: Компьютер загадывает число, Вы пытаетесь отгадать его как можно быстрее.</p>
-<input type="number" placeholder="Вводите число сюда" id="inp"><br><br>
+<input type="number" placeholder="Введите число" id="inp"><br><br>
 
 <span></span>
 
@@ -55,10 +56,10 @@ function predictNum() {
 		
 		else{
 			if(inp.value < random){
-			result.textContent = "Больше загаданного числа " + inp.value;
+			result.innerHTML = "Загадочное число " + "<br>" + "больше " + inp.value;
 			}  
 			else if(inp.value > random){
-			result.textContent = "Меньше загаданного числа "  + inp.value;
+			result.innerHTML = "Загадочное число " + "<br>" + "меньше " + inp.value;
 			} 
 			else if(inp.value == random){
 			result.textContent = "";

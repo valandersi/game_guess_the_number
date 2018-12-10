@@ -4,13 +4,25 @@
 	<meta charset="UTF-8">
 	<title>Угадай число!!</title>
 	<style>
+	#inp{border: 2px dotted blue;}
+	body {background-color: #d57785;color:white;}
+	span {font-size:24px;font-weigth:bold;}
+
+
 	</style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<h1>Угадай число!!</h1>
-<input type="number"><br>
+<h1>Игра: Угадай число!!</h1>
+<p>Угадай число - это логическая игра. Сють игры: Компьютер загадывает число, Вы пытаетесь отгадать его как можно быстрее.</p>
+<input type="number" placeholder="Вводите число сюда" id="inp"><br><br>
+
 <span></span>
+
+
+<h3>Правила игры.</h3>
+<p>Компьютер загадывает число от 1 до 100. Ваша задача угадать это число. Если введенное число больше, под полем куда Вы вводили число будет подсказка и наоборот если число меньше, будет написано "Загаданное число меньше". Как только Вы введете правильный ответ будет написано "Вы выиграли" и игра начнется сначала. Поиграем??</p>
+
 <script>
 "use strict"
 var inp = document.querySelector("input");
